@@ -6,3 +6,4 @@ save() {
 
 save .vimrc
 save .gitconfig
+save .bash_aliases
