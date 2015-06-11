@@ -1,0 +1,12 @@
+[include]
+  path = ~/.gitauthor
+[color]
+	ui = auto
+[push]
+	default = simple
+[merge]
+	conflictstyle = diff3
+[alias]
+  edit-unmerged = "!vim `git diff --name-only --diff-filter=U`"
+  add-unmerged = "!git add `git diff --name-only --diff-filter=U`"
+  ignore-untracked = "!git status --porcelain | grep '^??' | cut -c4- >>.gitignore"

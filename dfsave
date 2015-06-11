@@ -1,0 +1,8 @@
+#!/bin/bash
+
+save() {
+  cp $HOME/$1 $HOME/dotfiles/$1
+}
+
+save .vimrc
+save .gitconfig
