@@ -28,3 +28,5 @@ git()
     command git "$@"
   fi
 }
+
+alias tmux="tmux -2"
