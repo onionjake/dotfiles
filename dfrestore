@@ -1,0 +1,14 @@
+#!/bin/bash
+
+save() {
+  cp $HOME/$1 $HOME/dotfiles/$1
+}
+
+restore() {
+  cp $HOME/dotfiles/$1 $HOME/$1 
+}
+
+restore .vimrc
+restore .gitconfig
+restore .bash_aliases
+restore .tmux.conf

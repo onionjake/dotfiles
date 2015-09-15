@@ -1,8 +1,9 @@
 export PATH=~/bin:$PATH
+export EDITOR=vim
 alias repoclean='sudo echo "Cleaning with 8 threads"; repo forall -j8 -p -c sudo git clean -xqdf'
 . /etc/bash_completion.d/git-prompt
 
-if [ $(hostname) != $WORKING_COMPUTER ]
+if [ $(hostname) != "$WORKING_COMPUTER" ]
 then
   DISPLAY_HOSTNAME="\[$(tput setaf 6)\]$(hostname) \[$(tput sgr0)\]"
 fi
