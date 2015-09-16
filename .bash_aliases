@@ -31,3 +31,5 @@ git()
 }
 
 alias tmux="tmux -2"
+
+export GOPATH=~/.gostuff

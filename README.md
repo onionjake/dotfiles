@@ -43,3 +43,9 @@ cd fonts
 ```
 
 Pick the font in Edit -> Profile Preferences -> Custom font -> Ubuntu Mono derivative Powerline Regular
+
+Install go utilities:
+
+```
+:GoInstallBinaries
+```
