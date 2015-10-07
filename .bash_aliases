@@ -33,3 +33,9 @@ git()
 alias tmux="tmux -2"
 
 export GOPATH=~/.gostuff
+
+# unlimited bash history
+export HISTSIZE=""
+shopt -s histappend
+
+HISTTIMEFORMAT='%F %T '
