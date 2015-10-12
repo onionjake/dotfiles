@@ -12,3 +12,4 @@ restore .vimrc
 restore .gitconfig
 restore .bash_aliases
 restore .tmux.conf
+restore bin/lxc-ssh

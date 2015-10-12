@@ -8,3 +8,4 @@ save .vimrc
 save .gitconfig
 save .bash_aliases
 save .tmux.conf
+save bin/lxc-ssh

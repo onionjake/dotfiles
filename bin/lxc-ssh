@@ -1,0 +1,9 @@
+#!/bin/bash
+
+IP=$(sudo lxc-info "$@" -i | grep -oP '\d+\.\d+\.\d+\.\d+')
+echo "Found IP $IP"
+
+ARGS=$(echo -n "$@" | grep -oP '\-\-.*$' | cut -c3-)
+echo "With args: $ARGS"
+
+ssh $IP $ARGS
