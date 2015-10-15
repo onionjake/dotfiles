@@ -49,3 +49,10 @@ Install go utilities:
 ```
 :GoInstallBinaries
 ```
+
+Generate gotags:
+
+```
+cd ~/dir/to/go/code && ~/.gostuff/bin/gotags -R `pwd` > ~/.vim/gotags
+# add to .vimrc.custom: tags+=~/.vim/gotags 
+```
