@@ -93,3 +93,4 @@ let g:tagbar_type_go = {
 
 source ~/.vimrc.custom
 
+set smartcase

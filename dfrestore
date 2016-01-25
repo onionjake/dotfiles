@@ -13,3 +13,5 @@ restore .gitconfig
 restore .bash_aliases
 restore .tmux.conf
 restore bin/lxc-ssh
+restore bin/scan-wifi
+restore bin/min_brightness

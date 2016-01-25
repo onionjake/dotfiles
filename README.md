@@ -56,3 +56,9 @@ Generate gotags:
 cd ~/dir/to/go/code && ~/.gostuff/bin/gotags -R `pwd` > ~/.vim/gotags
 # add to .vimrc.custom: tags+=~/.vim/gotags 
 ```
+
+Install xclip:
+
+```
+sudo apt-get install xclip vim-gtk
+```

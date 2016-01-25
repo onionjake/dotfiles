@@ -9,3 +9,5 @@ save .gitconfig
 save .bash_aliases
 save .tmux.conf
 save bin/lxc-ssh
+save bin/scan-wifi
+save bin/min_brightness

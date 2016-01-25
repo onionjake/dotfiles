@@ -40,6 +40,8 @@ shopt -s histappend
 
 HISTTIMEFORMAT='%F %T '
 
+set -o vi
+
 
 ## This needs to be split back out
 
@@ -65,3 +67,4 @@ if [ -f "${SSH_ENV}" ]; then
 else
      start_agent;
 fi
+
