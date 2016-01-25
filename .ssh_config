@@ -1,0 +1,13 @@
+Host *
+  ServerAliveInterval 60
+  Compression yes
+  ControlPath ~/.ssh/controlmasters/%r@%h:%p
+  ControlMaster auto
+  ControlPersist 10m
+
+# proxy ssh connections through another ssh server
+#Host proxy:*
+#    ProxyCommand ssh <some server> -W `echo -n %h | cut -d ':' -f 2`:%p
+#    Compression yes
+#    ServerAliveInterval 30
+#    TCPKeepAlive yes
