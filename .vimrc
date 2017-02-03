@@ -13,6 +13,11 @@ let g:ycm_server_python_interpreter = '/usr/bin/python'
 let g:ycm_always_populate_location_list = 1
 let g:airline_powerline_fonts = 1
 let g:ycm_use_ultisnips_completer = 1
+let g:ctrlp_root_markers = ['.go-deps']
+
+set clipboard=unnamed
+
+
 
 " customize the tmux powerline
 " let g:tmuxline_preset = 'custom'
@@ -28,10 +33,15 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-endwise'
+Plugin 'raimondi/delimitmate'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'majutsushi/tagbar'
 Plugin 'SirVer/ultisnips'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-ruby/vim-ruby'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rust-lang/rust.vim'
 
@@ -121,5 +131,6 @@ set smartcase
 
 autocmd FileType proto setlocal noexpandtab
 au BufNewFile,BufRead *.sls set filetype=yaml.jinja
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
