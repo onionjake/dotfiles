@@ -10,3 +10,8 @@
   edit-unmerged = "!vim `git diff --name-only --diff-filter=U`"
   add-unmerged = "!git add `git diff --name-only --diff-filter=U`"
   ignore-untracked = "!git status --porcelain | grep '^??' | cut -c4- >>.gitignore"
+#  loglog = "!git log --oneline --graph --cherry-pick --boundary --left-right --decorate"
+  loglog = "!git log --oneline --graph --boundary --left-right --decorate"
+  tree="log --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s' --date=short"
+[diff]
+  renameLimit = 10000

@@ -32,7 +32,7 @@ git()
 
 alias tmux="tmux -2"
 
-export GOPATH=~/.gostuff
+export PATH=$PATH:$GOPATH/bin
 
 # unlimited bash history
 export HISTSIZE=""
@@ -41,6 +41,7 @@ shopt -s histappend
 HISTTIMEFORMAT='%F %T '
 
 set -o vi
+bind -m vi-command ".":insert-last-argument
 
 
 ## This needs to be split back out

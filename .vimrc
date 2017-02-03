@@ -5,16 +5,21 @@ filetype off
 set t_Co=256 " We support 256 colors
 set laststatus=2 " Force vim-airline to always display
 
-let mapleader="," 
+"set cc=80
 
+let mapleader=","
+
+let g:ycm_server_python_interpreter = '/usr/bin/python'
 let g:ycm_always_populate_location_list = 1
 let g:airline_powerline_fonts = 1
 let g:ycm_use_ultisnips_completer = 1
 
+" customize the tmux powerline
+" let g:tmuxline_preset = 'custom'
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
+call vundle#begin() 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -25,6 +30,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
 Plugin 'SirVer/ultisnips'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rust-lang/rust.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,9 +53,19 @@ set expandtab
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+let g:go_bin_path = expand("~/bin")
 "let g:go_auto_type_info = 1
 
 
@@ -93,4 +112,14 @@ let g:tagbar_type_go = {
 
 source ~/.vimrc.custom
 
+let g:rustfmt_autosave = 1
+
+set viminfo='100,<50,s10,h,f1
+" set cmdheight=2
+
 set smartcase
+
+autocmd FileType proto setlocal noexpandtab
+au BufNewFile,BufRead *.sls set filetype=yaml.jinja
+
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
