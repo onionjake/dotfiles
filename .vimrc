@@ -14,9 +14,9 @@ let g:ycm_always_populate_location_list = 1
 let g:airline_powerline_fonts = 1
 let g:ycm_use_ultisnips_completer = 1
 let g:ctrlp_root_markers = ['.go-deps']
+let g:go_template_file = "sm.go"
 
 set clipboard=unnamed
-
 
 
 " customize the tmux powerline
@@ -33,7 +33,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-endwise'
+"Plugin 'tpope/vim-endwise'
 Plugin 'raimondi/delimitmate'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'terryma/vim-multiple-cursors'
@@ -42,8 +42,11 @@ Plugin 'SirVer/ultisnips'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'zenbro/mirror.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'epeli/slimux'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -74,6 +77,16 @@ au FileType go nmap <leader>b <Plug>(go-build)
 au FileType go nmap <leader>t <Plug>(go-test)
 au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
 au FileType go nmap <Leader>i <Plug>(go-info)
+nmap <Leader>p :MirrorEdit prod<CR>
+nmap <Leader>s :MirrorEdit staging<CR>
+nmap <leader>n :NERDTreeToggle<cr>
+nmap <leader>f :NERDTreeFind<cr>
+map <Leader>s :SlimuxREPLSendLine<CR>
+vmap <Leader>s :SlimuxREPLSendSelection<CR>
+map <Leader>d :SlimuxREPLSendBuffer<CR>
+map <Leader>a :SlimuxShellLast<CR>
+map <Leader>k :SlimuxSendKeysLast<CR>
+
 
 let g:go_bin_path = expand("~/bin")
 "let g:go_auto_type_info = 1

@@ -40,8 +40,8 @@ shopt -s histappend
 
 HISTTIMEFORMAT='%F %T '
 
-set -o vi
-bind -m vi-command ".":insert-last-argument
+#set -o vi
+#bind -m vi-command ".":insert-last-argument
 
 
 ## This needs to be split back out
