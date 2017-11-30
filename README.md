@@ -18,19 +18,20 @@ let g:ycm_extra_conf_globlist = ['~/source/dir/.ycm_extra_conf.py']
 ```
 
 
-Setup vundle:
+Setup vim-plug:
 
 ```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim
-:PluginInstall
+:PlugInstall
 ```
 
 Setup YouCompleteMe:
 
 ```
 sudo apt-get install python-dev cmake
-cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/plugged/YouCompleteMe
 ./install.py --clang-completer --gocode-completer
 ```
 

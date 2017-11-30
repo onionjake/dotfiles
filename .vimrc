@@ -22,35 +22,34 @@ set clipboard=unnamed
 " customize the tmux powerline
 " let g:tmuxline_preset = 'custom'
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin() 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'fatih/vim-go'
-Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'edkolev/tmuxline.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-"Plugin 'tpope/vim-endwise'
-Plugin 'raimondi/delimitmate'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'majutsushi/tagbar'
-Plugin 'SirVer/ultisnips'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'zenbro/mirror.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'epeli/slimux'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#begin('~/.vim/plugged')
+Plug 'tpope/vim-sensible'
+Plug 'gmarik/Vundle.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'fatih/vim-go'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'edkolev/tmuxline.vim'
+Plug 'tpope/vim-fugitive'
+" Plug 'DrawIt'
+Plug 'bling/vim-airline'
+Plug 'raimondi/delimitmate'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'majutsushi/tagbar'
+Plug 'SirVer/ultisnips'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'airblade/vim-gitgutter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'zenbro/mirror.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'epeli/slimux'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+call plug#end()
+
+filetype plugin indent on
 
 set background=dark
 colorscheme delek
@@ -86,6 +85,8 @@ vmap <Leader>s :SlimuxREPLSendSelection<CR>
 map <Leader>d :SlimuxREPLSendBuffer<CR>
 map <Leader>a :SlimuxShellLast<CR>
 map <Leader>k :SlimuxSendKeysLast<CR>
+
+nnoremap <C-P> :GFiles<CR>
 
 
 let g:go_bin_path = expand("~/bin")

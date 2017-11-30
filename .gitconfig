@@ -12,6 +12,7 @@
   ignore-untracked = "!git status --porcelain | grep '^??' | cut -c4- >>.gitignore"
 #  loglog = "!git log --oneline --graph --cherry-pick --boundary --left-right --decorate"
   loglog = "!git log --oneline --graph --boundary --left-right --decorate"
+  loglogshort = "!git log --pretty=short --boundary --left-right"
   tree="log --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s' --date=short"
 [diff]
   renameLimit = 10000
