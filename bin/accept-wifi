@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ "$(iwgetid --raw)" == "UTA-WiFi" ]; then
+
+curl -s -o /dev/null 'http://utawifi.com/' -H 'Host: utawifi.com' -H 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:57.0) Gecko/20100101 Firefox/57.0' -H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' -H 'Accept-Language: en-US,en;q=0.5' --compressed -H 'Referer: http://utawifi.com/' -H 'Content-Type: application/x-www-form-urlencoded' -H 'DNT: 1' -H 'Connection: keep-alive' -H 'Upgrade-Insecure-Requests: 1' --data 'accept-conditions=yes&btn-connect='
+
+fi

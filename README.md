@@ -63,3 +63,8 @@ Install xclip:
 ```
 sudo apt-get install xclip vim-gtk
 ```
+
+Install shellcheck:
+```
+sudo apt install shellcheck
+```

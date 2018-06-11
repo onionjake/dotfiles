@@ -11,3 +11,4 @@ save .tmux.conf
 save bin/lxc-ssh
 save bin/scan-wifi
 save bin/min_brightness
+save bin/accept-wifi
