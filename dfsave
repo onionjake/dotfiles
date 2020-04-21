@@ -1,7 +1,9 @@
 #!/bin/bash
 
+dotfile_dir=$(git rev-parse --show-toplevel)
+
 save() {
-  cp $HOME/$1 $HOME/dotfiles/$1
+  cp $HOME/$1 $dotfile_dir/$1
 }
 
 save .vimrc
