@@ -2,12 +2,8 @@
 
 dotfile_dir=$(git rev-parse --show-toplevel)
 
-save() {
-  cp $HOME/$1 $dotfile_dir/$1
-}
-
 restore() {
-  cp $dotfile_dir/$1 $HOME/$1 
+  cp $dotfile_dir/$1 $HOME/$1
 }
 
 restore .vimrc
@@ -17,3 +13,4 @@ restore .tmux.conf
 restore bin/lxc-ssh
 restore bin/scan-wifi
 restore bin/min_brightness
+restore bin/accept-wifi

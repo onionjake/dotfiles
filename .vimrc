@@ -14,7 +14,6 @@ let g:ycm_always_populate_location_list = 1
 let g:airline_powerline_fonts = 1
 let g:ycm_use_ultisnips_completer = 1
 let g:ctrlp_root_markers = ['.go-deps']
-let g:go_template_file = "sm.go"
 let g:rustfmt_autosave = 1
 
 set clipboard=unnamed
@@ -22,6 +21,15 @@ set clipboard=unnamed
 
 " customize the tmux powerline
 " let g:tmuxline_preset = 'custom'
+
+let g:tmuxline_preset = {
+        \ 'a': '[#S]',
+        \ 'win': '#I:#W#F',
+        \ 'cwin': '#I:#W#F',
+        \ 'y': '#(NO_COLOR=1 vimticker.sh VOO)',
+        \ 'z': '%H:%M %d-%b-%y',
+        \ 'options': {
+        \'status-justify': 'left'}}
 
 
 call plug#begin('~/.vim/plugged')
@@ -43,6 +51,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-ruby/vim-ruby'
 Plug 'zenbro/mirror.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'udalov/kotlin-vim'
 Plug 'scrooloose/nerdtree'
 Plug 'epeli/slimux'
 Plug 'w0rp/ale'
@@ -90,7 +99,7 @@ map <Leader>k :SlimuxSendKeysLast<CR>
 nnoremap <C-P> :GFiles<CR>
 
 
-let g:go_bin_path = expand("~/bin")
+let g:go_bin_path = expand("~/go/.vimbin")
 "let g:go_auto_type_info = 1
 
 

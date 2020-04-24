@@ -1,4 +1,13 @@
 
+```
+mkdir ~/bin
+mkdir ~/.vim/.undo
+mkdir ~/.vim/.swp
+mkdir ~/go/.vimbin
+touch ~/.vimrc.custom
+```
+
+
 Put git author stuff in `~/.gitauthor`
 ```
 [user]
